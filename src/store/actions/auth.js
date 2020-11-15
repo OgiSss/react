@@ -68,6 +68,30 @@ export const auth = (email, password) => {
     };
 };
 
+export const signup = (email, password) => {
+    return dispatch => {
+        dispatch(authStart());
+        const authData = {
+            email: email,
+            password: password,
+            returnSecureToken: true
+        };
+        let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCvvDgXMowQi29W_gdF91XqL6anDqs7lss';
+        axios.post(url, authData)
+            .then(response => {
+                const expirationDate = new Date(new Date().getTime() + response.data.expiresIn * 1000);
+                localStorage.setItem('token', response.data.idToken);
+                localStorage.setItem('expirationDate', expirationDate);
+                localStorage.setItem('userId', response.data.localId);
+                dispatch(authSuccess(response.data.idToken, response.data.localId));
+                dispatch(checkAuthTimeout(response.data.expiresIn));
+            })
+            .catch(err => {
+                dispatch(authFail(err.response.data.error));
+            });
+    };
+};
+
 export const setAuthRedirectPath = (path) => {
     return {
         type: actionTypes.SET_AUTH_REDIRECT_PATH,

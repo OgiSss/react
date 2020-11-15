@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import * as actions from '../../../store/actions/index';
 
-const logout = props => {
+const Logout = props => {
   const { onLogout } = props;
 
   useEffect(() => {
@@ -23,4 +23,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   null,
   mapDispatchToProps
-)(logout);
+)(Logout);
