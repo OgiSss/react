@@ -66,7 +66,7 @@
 /*-------------------------------------------------------------------*/
 /* === SCSS Compass Functions === */
 @import '~compass-mixins/lib/compass';
-@import '../node_modules/compass-mixins/lib/animate';
+@import '~compass-mixins/lib/animate';
 
 /*-------------------------------------------------------------------*/
 /* === Boostrap Main SCSS === */
@@ -93,7 +93,6 @@
 @import 'utilities';
 @import 'demo';
 
-
 /*-------------------------------------------------------------------*/
 /* === Components === */
 @import 'components/buttons';
@@ -108,6 +107,10 @@
 @import 'components/tables';
 
 /*-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*/
+/* === Import mdi fonts === */
+@import '~@mdi/font/scss/materialdesignicons';
 
 /* === Plugin overrides === */
 @import 'components/plugin-overrides/data-tables';
