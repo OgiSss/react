@@ -23,7 +23,7 @@ export const TotalSales = () => {
 
     useEffect(() => {
 
-        setInterval(() => {
+        const interval = setInterval(() => {
             let oldDataSet = dataSet.datasets[0];
             let newData = [];
 
@@ -48,7 +48,9 @@ export const TotalSales = () => {
 
             setDataSet(newState);
         }, 5000);
-    });
+
+        return () => clearInterval(interval);
+    }, []);
 
     return (<div className="col-md-5 grid-margin stretch-card" >
         <div className="card">

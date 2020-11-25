@@ -45,7 +45,7 @@ const Navbar = () => {
                             <p className="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
                             <a className="dropdown-item">
                                 <div className="item-thumbnail">
-                                    <img src="/images/faces/face4.jpg" alt="image" className="profile-pic" />
+                                    <img src="/assets/images/faces/face4.jpg" alt="image" className="profile-pic" />
                                 </div>
                                 <div className="item-content flex-grow">
                                     <h6 className="ellipsis font-weight-normal">David Grey</h6>
@@ -55,7 +55,7 @@ const Navbar = () => {
                             </a>
                             <a className="dropdown-item">
                                 <div className="item-thumbnail">
-                                    <img src="images/faces/face2.jpg" alt="image" className="profile-pic" />
+                                    <img src="/assets/images/faces/face2.jpg" alt="image" className="profile-pic" />
                                 </div>
                                 <div className="item-content flex-grow">
                                     <h6 className="ellipsis font-weight-normal">Tim Cook</h6>
@@ -65,7 +65,7 @@ const Navbar = () => {
                             </a>
                             <a className="dropdown-item">
                                 <div className="item-thumbnail">
-                                    <img src="images/faces/face3.jpg" alt="image" className="profile-pic" />
+                                    <img src="/assets/images/faces/face3.jpg" alt="image" className="profile-pic" />
                                 </div>
                                 <div className="item-content flex-grow">
                                     <h6 className="ellipsis font-weight-normal"> Johnson</h6>
@@ -120,10 +120,6 @@ const Navbar = () => {
                         </div>
                     </li>
                     <li className="nav-item ">
-                        {/* <a className="nav-link dropdown-toggle" data-toggle="dropdown" id="profileDropdown">
-                        
-                        <span className="nav-profile-name">Louis Barnett</span>
-                    </a> */}
                         <NavDropdown className=" nav-profile" title="Oskar" id="basic-nav-dropdown">
                             <NavDropdown.Item as={Link} to="/logout" >
                                 <i className="mdi mdi-logout text-primary"></i>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Breadcrumb } from 'react-bootstrap';
 
 const dashboardHeader = () => (
     <div className="row">
@@ -12,8 +11,7 @@ const dashboardHeader = () => (
                     </div>
                     <div className="d-flex">
                         <i className="mdi mdi-home text-muted hover-cursor"></i>
-                        <p className="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;Dashboard&nbsp;/&nbsp;</p>
-                        <p className="text-primary mb-0 hover-cursor">Analytics</p>
+                        <p className="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;Dashboard&nbsp;</p>
                     </div>
                 </div>
                 <div className="d-flex justify-content-between align-items-end flex-wrap">

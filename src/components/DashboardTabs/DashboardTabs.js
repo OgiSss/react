@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-
+import './DashboardTabs.scss';
 
 const DashboardTabs = () => {
-    const [tabs, setTabs] = useState(['overview', 'sales', 'purchase']);
+    const [tabs] = useState(['overview', 'sales', 'purchase']);
     const [activeTab, setActiveTab] = useState('overview');
 
     const headerTabs = tabs.map((tab, index) => {
@@ -20,7 +20,7 @@ const DashboardTabs = () => {
                         {headerTabs}
                     </ul>
                     <div className="tab-content py-0 px-0">
-                        <div className={activeTab === 'overview' ? "tab-pane fade show active" : "tab-pane"} id="overview" role="tabpanel" aria-labelledby="overview-tab">
+                        <div className={activeTab === 'overview' ? ("tab-pane fade-in active") : "tab-pane "} id="overview" role="tabpanel" aria-labelledby="overview-tab">
                             <div className="d-flex flex-wrap justify-content-xl-between">
                                 <div className="d-none d-xl-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
                                     <i className="mdi mdi-calendar-heart icon-lg mr-3 text-primary"></i>
@@ -68,7 +68,7 @@ const DashboardTabs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={activeTab === 'sales' ? "tab-pane fade show active" : "tab-pane"} id="sales" role="tabpanel" aria-labelledby="sales-tab">
+                        <div className={activeTab === 'sales' ? "tab-pane fade-in show active" : "tab-pane"} id="sales" role="tabpanel" aria-labelledby="sales-tab">
                             <div className="d-flex flex-wrap justify-content-xl-between">
                                 <div className="d-none d-xl-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
                                     <i className="mdi mdi-calendar-heart icon-lg mr-3 text-primary"></i>
@@ -116,7 +116,7 @@ const DashboardTabs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={activeTab === 'purchase' ? "tab-pane fade show active" : "tab-pane"} id="purchases" role="tabpanel" aria-labelledby="purchases-tab">
+                        <div className={activeTab === 'purchase' ? "tab-pane fade-in show active" : "tab-pane"} id="purchases" role="tabpanel" aria-labelledby="purchases-tab">
                             <div className="d-flex flex-wrap justify-content-xl-between">
                                 <div className="d-none d-xl-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
                                     <i className="mdi mdi-calendar-heart icon-lg mr-3 text-primary"></i>

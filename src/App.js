@@ -5,7 +5,6 @@ import { withRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Logout from './containers/Auth/Logout/Logout';
 import * as fromActions from './store/actions/index';
-import Profile from './containers/Profile/Profile';
 import SignUp from './containers/Auth/SignUp/SignUp';
 
 const Auth = React.lazy(() => {
@@ -15,6 +14,11 @@ const Auth = React.lazy(() => {
 const Dashboard = React.lazy(() => {
   return import('./containers/Dashboard/Dashboard');
 });
+
+const Profile = React.lazy(() => {
+  return import('./containers/Profile/Profile');
+});
+
 
 const App = (props) => {
   const { onTryAutoSignup } = props;
@@ -44,7 +48,7 @@ const App = (props) => {
   }
 
   return (
-    <Layout isAuthenticated={props.isAuthenticated} >
+    <Layout isAuthenticated={props.isAuthenticated} routes={routes}>
       <Suspense fallback={<p>Loading...</p>}>{routes}</Suspense>
     </Layout>
 
