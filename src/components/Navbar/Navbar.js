@@ -2,10 +2,12 @@ import React, { useState, useEffect, } from 'react';
 import { Nav } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+// import logo from '/assets/images/logo.png';
+
 
 const Navbar = () => {
 
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
     const [isOpenMessage, setIsOpenMessage] = useState(false)
     useEffect(() => {
         document.body.classList.toggle('sidebar-icon-only');
@@ -15,7 +17,7 @@ const Navbar = () => {
         <Nav className="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div className="navbar-brand-wrapper d-flex justify-content-center">
                 <div className="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-                    <span className="navbar-brand brand-logo" ><img src="/images/logo.png" alt="logo" /></span>
+                    <span className="navbar-brand brand-logo" ><img src={require('/assets/images/logo.png')} alt="logo" /></span>
                     <span className="navbar-brand brand-logo-mini" ><img src="images/logo-mini.svg" alt="logo" /></span>
                     <button className="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize" onClick={() => setIsOpen(!isOpen)}>
                         <span className="mdi mdi-sort-variant"></span>

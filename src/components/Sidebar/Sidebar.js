@@ -4,7 +4,7 @@ import { Nav } from "react-bootstrap";
 import './Sidebar.scss'
 import { Link } from 'react-router-dom';
 
-const Sidebar = props => {
+const Sidebar = () => {
 
     return (
         <Nav className="sidebar sidebar-offcanvas" id="sidebar">
