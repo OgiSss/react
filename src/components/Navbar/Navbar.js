@@ -15,8 +15,8 @@ const Navbar = () => {
         <Nav className="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div className="navbar-brand-wrapper d-flex justify-content-center">
                 <div className="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-                    <a className="navbar-brand brand-logo" ><img src="images/logo.svg" alt="logo" /></a>
-                    <a className="navbar-brand brand-logo-mini" ><img src="images/logo-mini.svg" alt="logo" /></a>
+                    <span className="navbar-brand brand-logo" ><img src="/images/logo.png" alt="logo" /></span>
+                    <span className="navbar-brand brand-logo-mini" ><img src="images/logo-mini.svg" alt="logo" /></span>
                     <button className="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize" onClick={() => setIsOpen(!isOpen)}>
                         <span className="mdi mdi-sort-variant"></span>
                     </button>
@@ -37,52 +37,52 @@ const Navbar = () => {
                 </ul>
                 <ul className="navbar-nav navbar-nav-right">
                     <li className={isOpenMessage ? "nav-item dropdown mr-1 show" : "nav-item dropdown mr-1 "} onClick={() => setIsOpenMessage(!isOpenMessage)}>
-                        <a className="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" data-toggle="dropdown">
+                        <span className="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" data-toggle="dropdown">
                             <i className="mdi mdi-message-text mx-0"></i>
                             <span className="count"></span>
-                        </a>
+                        </span>
                         <div className={isOpenMessage ? "dropdown-menu dropdown-menu-right navbar-dropdown show" : "dropdown-menu dropdown-menu-right navbar-dropdown"} aria-labelledby="messageDropdown">
                             <p className="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
-                            <a className="dropdown-item">
+                            <span className="dropdown-item">
                                 <div className="item-thumbnail">
-                                    <img src="/assets/images/faces/face4.jpg" alt="image" className="profile-pic" />
+                                    <img src="/assets/images/faces/face4.jpg" alt="face " className="profile-pic" />
                                 </div>
                                 <div className="item-content flex-grow">
                                     <h6 className="ellipsis font-weight-normal">David Grey</h6>
                                     <p className="font-weight-light small-text text-muted mb-0">
                                         The meeting is cancelled</p>
                                 </div>
-                            </a>
-                            <a className="dropdown-item">
+                            </span>
+                            <span className="dropdown-item">
                                 <div className="item-thumbnail">
-                                    <img src="/assets/images/faces/face2.jpg" alt="image" className="profile-pic" />
+                                    <img src="/assets/images/faces/face2.jpg" alt="face " className="profile-pic" />
                                 </div>
                                 <div className="item-content flex-grow">
                                     <h6 className="ellipsis font-weight-normal">Tim Cook</h6>
                                     <p className="font-weight-light small-text text-muted mb-0">
                                         New product launch</p>
                                 </div>
-                            </a>
-                            <a className="dropdown-item">
+                            </span>
+                            <span className="dropdown-item">
                                 <div className="item-thumbnail">
-                                    <img src="/assets/images/faces/face3.jpg" alt="image" className="profile-pic" />
+                                    <img src="/assets/images/faces/face3.jpg" alt="face " className="profile-pic" />
                                 </div>
                                 <div className="item-content flex-grow">
                                     <h6 className="ellipsis font-weight-normal"> Johnson</h6>
                                     <p className="font-weight-light small-text text-muted mb-0">
                                         Upcoming board meeting</p>
                                 </div>
-                            </a>
+                            </span>
                         </div>
                     </li>
                     <li className="nav-item dropdown mr-4">
-                        <a className="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center notification-dropdown" id="notificationDropdown" data-toggle="dropdown">
+                        <span className="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center notification-dropdown" id="notificationDropdown" data-toggle="dropdown">
                             <i className="mdi mdi-bell mx-0"></i>
                             <span className="count"></span>
-                        </a>
+                        </span>
                         <div className="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="notificationDropdown">
                             <p className="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
-                            <a className="dropdown-item">
+                            <span className="dropdown-item">
                                 <div className="item-thumbnail">
                                     <div className="item-icon bg-success">
                                         <i className="mdi mdi-information mx-0"></i>
@@ -93,8 +93,8 @@ const Navbar = () => {
                                     <p className="font-weight-light small-text mb-0 text-muted">
                                         Just now</p>
                                 </div>
-                            </a>
-                            <a className="dropdown-item">
+                            </span>
+                            <span className="dropdown-item">
                                 <div className="item-thumbnail">
                                     <div className="item-icon bg-warning">
                                         <i className="mdi mdi-settings mx-0"></i>
@@ -105,8 +105,8 @@ const Navbar = () => {
                                     <p className="font-weight-light small-text mb-0 text-muted">
                                         Private message</p>
                                 </div>
-                            </a>
-                            <a className="dropdown-item">
+                            </span>
+                            <span className="dropdown-item">
                                 <div className="item-thumbnail">
                                     <div className="item-icon bg-info">
                                         <i className="mdi mdi-account-box mx-0"></i>
@@ -116,7 +116,7 @@ const Navbar = () => {
                                     <h6 className="font-weight-normal">New user registration</h6>
                                     <p className="font-weight-light small-text mb-0 text-muted">2 days ago</p>
                                 </div>
-                            </a>
+                            </span>
                         </div>
                     </li>
                     <li className="nav-item ">

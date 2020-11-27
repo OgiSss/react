@@ -18,7 +18,7 @@ const ProfileGallery = () => {
         <React.Fragment>
             <div className="py-4 px-4">
                 <div className="d-flex align-items-center justify-content-between mb-3">
-                    <h5 className="mb-0">Recent photos</h5><a className="btn btn-link text-muted">Show all</a>
+                    <h5 className="mb-0">Recent photos</h5><button className="btn btn-link text-muted">Show all</button>
                 </div>
                 <div className="row">
                     <div className="col-lg-4 mb-2 pr-lg-1"><img onClick={() => handlePhoto(0)} src={photos[0]} alt="" className="img-fluid rounded shadow-sm" /></div>
